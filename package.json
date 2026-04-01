@@ -1,0 +1,15 @@
+{
+  "name": "danding-screen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "局域网定段赛备战大屏",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  }
+}

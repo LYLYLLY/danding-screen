@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定段赛备战大屏配置</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="config-layout">
+      <header class="config-header">
+        <h1 class="config-title">定段赛备战大屏配置</h1>
+        <p class="config-subtitle">
+          这里用于维护学校名称、目标日期和励志语。老师端只需要打开根地址并按 <code>F11</code>
+          全屏，无需登录。
+        </p>
+      </header>
+
+      <section class="config-card">
+        <form class="config-grid" data-config-form>
+          <div class="field">
+            <label for="schoolName">学校名称</label>
+            <input id="schoolName" name="schoolName" required />
+          </div>
+
+          <div class="field">
+            <label for="pageTitle">页面标题</label>
+            <input id="pageTitle" name="pageTitle" required />
+          </div>
+
+          <div class="field">
+            <label for="targetDate">定段赛日期时间</label>
+            <input id="targetDate" name="targetDate" type="datetime-local" required />
+          </div>
+
+          <div class="field">
+            <label for="theme">主题风格</label>
+            <select id="theme" name="theme">
+              <option value="ink-gold">墨金棋境</option>
+            </select>
+          </div>
+
+          <div class="field field-full">
+            <label for="slogans">每日金句（每行一条，建议格式：内容 —— 署名，最多 30 条）</label>
+            <textarea id="slogans" name="slogans"></textarea>
+          </div>
+
+          <div class="field field-full">
+            <label class="checkbox-row" for="showSeconds">
+              <input id="showSeconds" name="showSeconds" type="checkbox" />
+              展示当前秒数
+            </label>
+          </div>
+
+          <div class="field field-full">
+            <p class="helper-text">
+              展示页地址：<code>/</code>。配置页地址：<code>/config</code>。建议将服务器电脑设置为固定局域网
+              IP，再把展示页地址发给老师。
+            </p>
+          </div>
+
+          <div class="field field-full">
+            <div class="actions">
+              <button type="submit">保存配置</button>
+              <a class="link-button" href="/" target="_blank" rel="noreferrer">打开展示页</a>
+            </div>
+            <p class="status-text" data-status-text>准备就绪。</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/config.js"></script>
+  </body>
+</html>

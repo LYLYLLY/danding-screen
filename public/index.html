@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定段赛倒计时</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="screen-body">
+    <main class="app-shell screen-layout">
+      <header class="screen-header">
+        <div>
+          <h1 class="school-name" data-school-name>智力运动学校</h1>
+          <p class="page-title" data-page-title>定段赛倒计时</p>
+        </div>
+        <div class="status-pill" data-target-info>目标时间加载中</div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-card">
+          <p class="eyebrow">距离定段赛还有</p>
+          <div class="countdown-row">
+            <p class="countdown-value" data-countdown-value>--</p>
+            <span class="countdown-unit">天</span>
+          </div>
+          <p class="countdown-detail" data-countdown-detail>正在校准赛程时间</p>
+
+          <div class="clock-panel">
+            <div class="info-card">
+              <span class="info-label">当前时间</span>
+              <span class="info-value" data-current-time>--:--:--</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">当前日期</span>
+              <span class="info-value" data-current-date>----</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="screen-footer">
+        <div class="slogan-group">
+          <div class="slogan-label">每日金句</div>
+          <div class="slogan-bar">
+            <span data-slogan-text>落子无悔，静待定段。</span>
+            <span class="slogan-author" data-slogan-author>—— 古训</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
