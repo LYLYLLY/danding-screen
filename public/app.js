@@ -107,12 +107,16 @@ function renderClock() {
 
   if (remainingMs <= 0) {
     els.countdownValue.textContent = "0";
-    els.countdownDetail.textContent = "定段赛已开始，沉着入局。";
+    if (els.countdownDetail) {
+      els.countdownDetail.textContent = "";
+    }
     return;
   }
 
   els.countdownValue.textContent = String(remainingDays);
-  els.countdownDetail.textContent = `距离 ${formatDateLabel(targetDate)} 还有 ${remainingDays} 天`;
+  if (els.countdownDetail) {
+    els.countdownDetail.textContent = "";
+  }
 }
 
 function rotateSlogan() {
@@ -143,7 +147,9 @@ async function init() {
     }, 60000);
   } catch (error) {
     console.error(error);
-    els.countdownDetail.textContent = "配置加载失败，请检查服务器。";
+    if (els.countdownDetail) {
+      els.countdownDetail.textContent = "配置加载失败，请检查服务器。";
+    }
   }
 }
 
