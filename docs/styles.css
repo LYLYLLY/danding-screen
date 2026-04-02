@@ -103,7 +103,7 @@ body::after {
   display: block;
   flex: 0 0 auto;
   filter: drop-shadow(0 4px 10px rgba(69, 57, 46, 0.08));
-  margin-top: 0.18rem;
+  margin-top: 0.08rem;
 }
 
 .screen-header::after {
@@ -121,6 +121,7 @@ body::after {
   font-size: clamp(1.7rem, 2.2vw, 2.5rem);
   font-weight: 600;
   letter-spacing: 0.04em;
+  line-height: 1.02;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
