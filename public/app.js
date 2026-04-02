@@ -86,7 +86,7 @@ function renderStatic(config) {
   document.title = `${config.schoolName} | ${config.pageTitle}`;
   els.schoolName.textContent = config.schoolName;
   els.pageTitle.textContent = config.pageTitle;
-  els.targetInfo.textContent = `目标时间 ${formatDateLabel(new Date(config.targetDate))}`;
+  els.targetInfo.textContent = formatDateLabel(new Date(config.targetDate));
 
   const slogans = Array.isArray(config.slogans) ? config.slogans : [];
   state.sloganIndex = Math.floor(Math.random() * Math.max(slogans.length, 1));

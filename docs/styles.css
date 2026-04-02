@@ -149,27 +149,28 @@ body::after {
 }
 
 .status-pill {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  color: var(--muted);
-  font-size: clamp(0.82rem, 0.92vw, 0.95rem);
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-  box-shadow: none;
-  position: relative;
-  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.18rem;
+  padding: 0.55rem 0.9rem 0.58rem 1rem;
+  border-left: 2px solid rgba(159, 67, 50, 0.28);
+  background: linear-gradient(90deg, rgba(159, 67, 50, 0.03), rgba(159, 67, 50, 0));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
-.status-pill::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.2rem;
-  bottom: 0.2rem;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(159, 67, 50, 0), rgba(159, 67, 50, 0.28), rgba(159, 67, 50, 0));
+.status-label {
+  color: rgba(159, 67, 50, 0.78);
+  font-size: clamp(0.74rem, 0.8vw, 0.82rem);
+  letter-spacing: 0.14em;
+}
+
+.status-date {
+  color: rgba(109, 61, 46, 0.96);
+  font-size: clamp(0.98rem, 1.08vw, 1.16rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .hero {
@@ -596,6 +597,7 @@ button {
   }
 
   .status-pill {
-    white-space: normal;
+    align-items: flex-start;
+    padding-left: 0.85rem;
   }
 }
