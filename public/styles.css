@@ -92,7 +92,7 @@ body::after {
 
 .brand-block {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   min-width: 0;
 }
@@ -103,6 +103,7 @@ body::after {
   display: block;
   flex: 0 0 auto;
   filter: drop-shadow(0 4px 10px rgba(69, 57, 46, 0.08));
+  margin-top: 0.18rem;
 }
 
 .screen-header::after {
